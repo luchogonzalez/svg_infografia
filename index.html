@@ -4,59 +4,8 @@
 	<title>Infografia</title>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="snapsvg/dist/snap.svg-min.js"></script>
-
-		<style type="text/css">
-		.st0{fill:#FAEBE8;}
-		.st1{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
-		.st2{fill:#FFFFFF;}
-		.st3{fill:#AFAFAF;}
-		.st4{fill:#C4C4C4;}
-		.st5{fill:none;stroke:#AFAFAF;stroke-width:0.75;stroke-miterlimit:10;}
-		.st6{fill:none;stroke:#AFAFAF;stroke-width:0.75;stroke-miterlimit:10;stroke-dasharray:5.0388,5.0388;}
-		.st7{fill:none;stroke:#AFAFAF;stroke-width:0.75;stroke-miterlimit:10;stroke-dasharray:4.9914,4.9914;}
-		.st8{fill:none;stroke:#AFAFAF;stroke-width:0.75;stroke-miterlimit:10;stroke-dasharray:4.9656,4.9656;}
-		.st9{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-		.st10{fill-rule:evenodd;clip-rule:evenodd;fill:#B29BC6;}
-		.st11{fill-rule:evenodd;clip-rule:evenodd;fill:#94A5D6;}
-		.st12{fill:none;stroke:#FFFFFF;stroke-width:0.75;stroke-miterlimit:10;}
-		.st13{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
-		.st14{fill-rule:evenodd;clip-rule:evenodd;fill:#D39985;}
-		.st15{opacity:0.5;fill:#94A5D6;}
-		.st16{opacity:0.5;fill:#D39985;}
-		.st17{fill:#B19AC5;}
-		.st18{fill:none;stroke:#B29BC6;stroke-miterlimit:10;}
-		.st19{fill:#94A5D6;}
-		.st20{fill:#D39985;}
-		.st21{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;stroke-dasharray:5,5;}
-		.st22{fill:#B29BC6;}
-		.st23{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:5,5;}
-		.st24{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
-		.st25{opacity:0.82;fill:#FFFFFF;}
-		.st26{fill:#C6C6C6;}
-		.st27{font-family:'PlayfairDisplay-Black';}
-		.st28{font-size:153.6398px;}
-		.st29{letter-spacing:6;}
-		.st30{font-size:24.7275px;}
-		.st31{font-family:'Poppins-Regular';}
-		.st32{font-size:18px;}
-		.st33{font-family:'Poppins-SemiBold';}
-		.st34{font-size:31.4114px;}
-		.st35{letter-spacing:11;}
-		.st2, .st24 {
-			animation: load 5s infinite;
-		}
-
-		#progress{
-			fill: transparent;
-			stroke: #FF0000;
-			 
-			stroke-width: 5; 
-			stroke-dasharray: 100%;
-
-		}
-
-
-	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+	<link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 	<svg x="0px" y="0px" viewBox="0 0 1442 901" style="enable-background:new 0 0 1442 901;" >
@@ -79,10 +28,10 @@
 		<rect class="st0" width="1442" height="901"/>
 		<svg id="front" width="760px">
 			<g>
-				<line class="st23" x1="388" y1="242" x2="1054" y2="242"/>
+				<!--<line class="st23" x1="388" y1="242" x2="1054" y2="242"/>-->
 				<g class="progress-content">
-					<line id="progress" x1="388" y1="242.5" x2="1054" y2="242.5" stroke-dashoffset="50%"  />
-					<circle class="st2" cx="483" cy="243" r="5"/>
+					<line id="progress" x1="388" y1="242.5" x2="1080" y2="242.5"   />
+					<circle class="st2" cx="388" cy="242.5" r="5"/>
 				</g>
 
 			</g>
@@ -113,23 +62,33 @@
 	</svg>
 
 	<script type="text/javascript">
-		var progressValue = 0;
+		var progressValue = 100;
 		var linePrgrs = $('#front');
+		var circle = $('.progress-content>circle');
+		var cx = circle.attr('cx');
+
+		var load = setInterval(updateProgressValue, 44);
+		
 
 		var updateProgressLine = function(value){  
-			linePrgrs.find('.progress-content>line').attr("stroke-dashoffset", progressValue+"%");
+			linePrgrs.find('.progress-content>line').attr("stroke-dashoffset", value+"%");
 		}
 
 		//Update the content fill value
-		var updateProgressValue = function(){
-		  if(progressValue>=100) progressValue = 0;
-		  progressValue++;
-		  updateProgressLine();
+		function updateProgressValue() {
+
+		    if (progressValue == 0) {
+		    	clearInterval(load);
+		    }
+		    progressValue--;
+		    updateProgressLine(progressValue);
 		}
 
-		window.setInterval(function(){
-			  updateProgressValue();
-		}, 50);
+		
+		TweenMax.to(circle, 2, { x:367 , ease:Linear.easeNone ,repeat:0 });
+
+
+		$(document).ready( load );
 	</script>
 
 </body>
