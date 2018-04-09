@@ -1,14 +1,14 @@
 @font-face {
     font-family: Poppins-SemiBold;
-    src: url(fonts/Poppins-SemiBold.otf);
+    src: url(../fonts/Poppins-SemiBold.otf);
 }
 @font-face {
     font-family: Poppins-Regular;
-    src: url(fonts/Poppins-Regular.otf);
+    src: url(../fonts/Poppins-Regular.otf);
 }
 @font-face {
     font-family: PlayfairDisplay-Black;
-    src: url(fonts/PlayfairDisplay-Black.otf);
+    src: url(../fonts/PlayfairDisplay-Black.otf);
 }
 
 body{
@@ -20,13 +20,14 @@ body{
 .popSemiBold   {font-family:'Poppins-SemiBold';}
 .playFairBlack {font-family:'PlayfairDisplay-Black';}
 
-.noFill    {fill:none;}
-.mainFill  {fill:#FAEBE8;}
-.whiteFill {fill:#FFFFFF;}
-.blue      {fill:#94A5D6;}
-.red       {fill:#D39985;}
-.violet    {fill:#B29BC6;}
-.gray      {fill:#C6C6C6;}
+.noFill      {fill:none;}
+.transparent {fill:transparent;}
+.mainFill    {fill:#FAEBE8;}
+.whiteFill   {fill:#FFFFFF;}
+.blue        {fill:#94A5D6;}
+.red         {fill:#D39985;}
+.violet      {fill:#B29BC6;}
+.gray        {fill:#C6C6C6;}
 
 .whiteStroke  {stroke:#FFFFFF}
 .violetStroke {stroke:#B29BC6}
@@ -36,25 +37,25 @@ body{
 .thickStroke  {stroke-width:3}
 .dashArray55  {stroke-dasharray: 5.5;}
 
-.letSp2  {letter-spacing:2;}
-.letSp3  {letter-spacing:3;}
-.letSp4  {letter-spacing:4;}
-.letSp6  {letter-spacing:6;}
+.letSp2  {letter-spacing:2; }
+.letSp3  {letter-spacing:3; }
+.letSp4  {letter-spacing:4; }
+.letSp6  {letter-spacing:6; }
 .letSp11 {letter-spacing:11;}
 .letSp30 {letter-spacing:30;}
 
-.fontSize9  {font-size:9px;}
-.fontSize10 {font-size:10px;}
-.fontSize11 {font-size:11px;}
-.fontSize13 {font-size:13px;}
-.fontSize15 {font-size:15px;}
-.fontSize17 {font-size:17px;}
-.fontSize18 {font-size:18px;}
-.fontSize20 {font-size:20px;}
-.fontSize24 {font-size:24px;}
-.fontSize31 {font-size:31px;}
-.fontSize83 {font-size:83px;}
-.fontSize153{font-size:153.6398px;}
+.fontSize9   {font-size:9px; }
+.fontSize10  {font-size:10px;}
+.fontSize11  {font-size:11px;}
+.fontSize13  {font-size:13px;}
+.fontSize15  {font-size:15px;}
+.fontSize17  {font-size:17px;}
+.fontSize18  {font-size:18px;}
+.fontSize20  {font-size:20px;}
+.fontSize24  {font-size:24px;}
+.fontSize31  {font-size:31px;}
+.fontSize83  {font-size:83px;}
+.fontSize153 {font-size:153.6398px;}
 
 .evOdd {fill-rule:evenodd;clip-rule:evenodd;}
 .miterLimit10 {stroke-miterlimit:10;}
@@ -69,18 +70,30 @@ body{
 
 #progress{
 	fill: transparent;
-	stroke: #B29BC6;
-	 
 	stroke-width: 5; 
 	stroke-dasharray: 100%;
 
 }
 
 #main{
-	position:absolute;
 	opacity: 0;
-	top:0px;
+	position: absolute;
+	top: 0px;
 
+}
+
+.dialog, .ui-widget-header{
+	font-family: 'Poppins-Regular';
+	color: #B29BC6;
+}
+
+
+
+.year, .year + text, #creditos{
+	transition: fill 1s;
+}
+.year:hover, .year + text:hover, #creditos:hover{
+	cursor: pointer;
 }
 
 
