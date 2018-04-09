@@ -82,6 +82,11 @@ body{
 
 }
 
+#front {
+	position: absolute;
+	top:-100px;
+}
+
 .dialog, .ui-widget-header{
 	font-family: 'Poppins-Regular';
 	color: #B29BC6;

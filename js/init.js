@@ -30,13 +30,13 @@ function moveHeader(){
 		repeat:0
 	});
 
-	tl.to('#header', 3, { scaleX:0.55, scaleY:0.53, x: -500, y: +230 })
-	  .to('.willGo', 2, { opacity: 0 })
-	  .to('#main'  , 3, { opacity: 1 });
+	tl.to('#header', 3, { scaleX:0.55, scaleY:0.53, x: -500, y: +360 })
+	  .to('.willGo', 4, { opacity: 0 }, '-=3')
+	  .to('#main'  , 6, { opacity: 1 }, '-=1');
 }
 
 
-TweenMax.to(circle, 1.7, { x:620 , ease:Linear.easeNone ,repeat:0 });
+TweenMax.to(circle, 1.7, { x:630 , ease:Linear.easeNone ,repeat:0 });
 
 
 $(document).ready( load );
