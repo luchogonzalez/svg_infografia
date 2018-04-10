@@ -32,6 +32,7 @@ function moveHeader(){
 
 	tl.to('#header', 3, { scaleX:0.55, scaleY:0.53, x: -500, y: +360 })
 	  .to('.willGo', 4, { opacity: 0 }, '-=3')
+	  .to('#aR', 0.1, {rotate:360})
 	  .to('#main'  , 6, { opacity: 1 }, '-=1');
 }
 
