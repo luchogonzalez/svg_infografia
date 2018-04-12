@@ -94,7 +94,7 @@ body{
 
 
 
-.year > path, .year > text, #creditos{
+*{
 	transition: fill 1s;
 }
 .year:hover, #creditos:hover{

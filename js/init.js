@@ -6,6 +6,28 @@ var credits = $('#creditos');
 var circle = $('.progress-content>circle');
 var cx = circle.attr('cx');
 
+var master = {
+	activeElement: null,
+	that: this,
+
+	reset: function(){
+		$('.componentPath').each(function(){
+			$(this).addClass('whiteFill');
+		});
+
+		$('.componentText').each( function(){
+			$(this).addClass('gray');
+		});
+	},
+	activate: function(newActive){
+		this.reset();
+		activeElement = newActive;
+		if(newActive.hasClass('componentPath')){
+			alert('activado: '+ activeElement);
+		}
+	}
+}
+
 var load = setInterval(updateProgressValue, 33);
 
 
