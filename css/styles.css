@@ -94,10 +94,10 @@ body{
 
 
 
-.year, .year + text, #creditos{
+.year > path, .year > text, #creditos{
 	transition: fill 1s;
 }
-.year:hover, .year + text:hover, #creditos:hover{
+.year:hover, #creditos:hover{
 	cursor: pointer;
 }
 
