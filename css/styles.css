@@ -20,6 +20,9 @@ body{
 .popSemiBold   {font-family:'Poppins-SemiBold';}
 .playFairBlack {font-family:'PlayfairDisplay-Black';}
 
+.activeYearPath {fill:#B29BC6 !important;}
+.activeYearText {fill:#FFFFFF !important;}
+
 .noFill      {fill:none;}
 .transparent {fill:transparent;}
 .mainFill    {fill:#FAEBE8;}

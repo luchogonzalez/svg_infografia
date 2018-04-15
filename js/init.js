@@ -6,30 +6,7 @@ var credits = $('#creditos');
 var circle = $('.progress-content>circle');
 var cx = circle.attr('cx');
 
-var master = {
-	activeElement: null,
-	that: this,
-
-	reset: function(){
-		$('.componentPath').each(function(){
-			$(this).addClass('whiteFill');
-		});
-
-		$('.componentText').each( function(){
-			$(this).addClass('gray');
-		});
-	},
-	activate: function(newActive){
-		this.reset();
-		activeElement = newActive;
-		if(newActive.hasClass('componentPath')){
-			alert('activado: '+ activeElement);
-		}
-	}
-}
-
 var load = setInterval(updateProgressValue, 33);
-
 
 var updateProgressLine = function(value){  
 	linePrgrs.find('.progress-content>line').attr("stroke-dashoffset", value+"%");
@@ -63,5 +40,7 @@ TweenMax.to(circle, 1.7, { x:630 , ease:Linear.easeNone ,repeat:0 });
 
 
 $(document).ready( load );
+
+
 
 
