@@ -10,7 +10,8 @@ master.reset = function(){
 		this.activeElement.children('text').removeClass('activeYearText');
 	}
 
-	$('.componentPath').each(function(){
+	//if it is a changed element, removes the last added class (fill)
+	$('.component').each(function(){
 		if($(this).hasClass('changed')){
 			actualFill = $(this).attr('class').split(' ').pop();
 			$(this).removeClass(actualFill);
@@ -18,9 +19,6 @@ master.reset = function(){
 		}
 	});
 
-	$('.componentText').each( function(){
-		$(this).addClass('gray');
-	});
 }
 
 master.activate = function(newActive){

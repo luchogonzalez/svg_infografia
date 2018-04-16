@@ -27,10 +27,10 @@ body{
 .transparent {fill:transparent;}
 .mainFill    {fill:#FAEBE8;}
 .whiteFill   {fill:#FFFFFF;}
+.gray        {fill:#C6C6C6;}
 .blue        {fill:#94A5D6;}
 .red         {fill:#D39985;}
 .violet      {fill:#B29BC6;}
-.gray        {fill:#C6C6C6;}
 
 .whiteStroke  {stroke:#FFFFFF}
 .violetStroke {stroke:#B29BC6}
