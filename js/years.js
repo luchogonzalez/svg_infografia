@@ -1,20 +1,13 @@
 //years.js: scripts to handle year events
 
 function activeColor(yearGroup){
-    var yearPath = yearGroup.children("path");
-	var yearText = yearGroup.children("text");
-
-	yearPath.switchClass('whiteFill', 'violet', 1000, 'easeInOutQuad');
-	yearText.switchClass('violet', 'whiteFill', 1000);
+	yearGroup.children("path").switchClass('whiteFill', 'violet');
+	yearGroup.children("text").switchClass('violet', 'whiteFill');
 }
 
-function resetColor(elem){
-	var yearGroup = elem;
-	var yearPath = yearGroup.children("path");
-	var yearText = yearGroup.children("text");
-
-	yearPath.switchClass('violet', 'whiteFill', 1000, 'easeInOutQuad');
-	yearText.switchClass('whiteFill', 'violet', 1000, 'easeInOutQuad');
+function resetColor(yearGroup){
+	yearGroup.children("path").switchClass('violet', 'whiteFill');
+	yearGroup.children("text").switchClass('whiteFill', 'violet');
 }
 
 
@@ -89,4 +82,16 @@ $('.year.y17').click(function(){
 	$('.per, .didac, .orien, .salsa, .folk, .disney, .didacC, .folkC, .lap, .fibraP, .alC1, .alC2, .perT, .folkT, .didacT, .salsaT, .orienT, .didacCT, .disneyT, .folkCT, .lapT, .fibraPT, .tAper, .tCamp, .tFog, .tReci, .tSke, .tZumb').addClass('changed red');
 	$('.fibra, .acri, .acriT, .fibraT, .tCumple, .tDise, .tInsta, .tOcio, .tPrev, .tReu, .tVia').addClass('changed violet');
 
+	var showComedia = {
+		text: 'SHOW COMEDIA',
+		color: 'blue',
+		category: 'alegria'
+	}
+	var actoScout = {
+		text: 'ACTO SCOUT',
+		color: 'red',
+		category: 'alegria'
+	}
+
+	eventsHandler.generateEmEvents([showComedia, actoScout]);
 });

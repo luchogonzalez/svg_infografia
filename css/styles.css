@@ -40,12 +40,12 @@ body{
 .thickStroke  {stroke-width:3}
 .dashArray55  {stroke-dasharray: 5.5;}
 
-.letSp2  {letter-spacing:2; }
-.letSp3  {letter-spacing:3; }
-.letSp4  {letter-spacing:4; }
-.letSp6  {letter-spacing:6; }
-.letSp11 {letter-spacing:11;}
-.letSp30 {letter-spacing:30;}
+.letSp2  {letter-spacing:2px; }
+.letSp3  {letter-spacing:3px; }
+.letSp4  {letter-spacing:4px; }
+.letSp6  {letter-spacing:6px; }
+.letSp11 {letter-spacing:11px;}
+/*.letSp30 {letter-spacing:30px;}*/
 
 .fontSize9   {font-size:9px; }
 .fontSize10  {font-size:10px;}
