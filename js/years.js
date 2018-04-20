@@ -92,6 +92,26 @@ $('.year.y17').click(function(){
 		color: 'red',
 		category: 'alegria'
 	}
+		var test1 = {
+		text: 'ENTREGA CINTO',
+		color: 'red',
+		category: 'paz'
+	}
+			var test2 = {
+		text: 'ITINERANCIA',
+		color: 'red',
+		category: 'paz'
+	}
+				var test3 = {
+		text: 'BOOTCAMP',
+		color: 'blue',
+		category: 'paz'
+	}
+				var test4 = {
+		text: 'CLASE CAIDA LIBRE',
+		color: 'red',
+		category: 'verguenza'
+	}
 
-	eventsHandler.generateEmEvents([showComedia, actoScout]);
+	eventsHandler.generateEmEvents([showComedia, actoScout, test1, test2, test3, test4]);
 });

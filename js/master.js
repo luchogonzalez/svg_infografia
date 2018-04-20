@@ -19,6 +19,13 @@ master.reset = function(){
 		}
 	});
 
+	//Removes emotions
+	$('.emotion').each(function(){
+		$(this).fadeOut("normal", function() {
+        	$(this).remove();
+    	});
+	});
+
 }
 
 master.activate = function(newActive){
