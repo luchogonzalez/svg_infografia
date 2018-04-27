@@ -75,6 +75,27 @@ $('.year.y94').click(function(){
 //14
 //15
 //16
+$('.year.y16').click(function(){
+	master.activate($(this));
+
+	$('.popB, .igle, .lap, .fibra, .acua, .lapP, .alD1, .alD2, .popT, .igleT, .lapT, .fibraT, .acuT, .lapPT, .tEns, .tFies, .tVia, .tRet, .tMision, .tMisa ').addClass('changed blue');
+	$('.fac, .imp, .per, .didac, .folk, .salsa, .illu, .alC1, .alC2, .alC3, .facialT, .improT, .perT, .didacT, .folkT, .salsaT, .illuT, .tAper, .tCamp, .tCurso, .tFog, .tReci, .tZumb, .tSke').addClass('changed red');
+	$('.popC, .folkC, .acri, .popCT, .folkCT, .acriT, .tReu, .tPrev, .tPen, .tOcio, .tInsta, .tDise, .tCumple').addClass('changed violet');
+
+	var instag = {
+		text: 'INSTAGRAMMER',
+		color: 'red',
+		category: 'alegria'
+	}
+	var mision = {
+		text: 'MISION',
+		color: 'blue',
+		category: 'alegria'
+	}
+
+	eventsHandler.generateEmEvents([instag, mision]);
+});
+
 //17
 $('.year.y17').click(function(){
 	master.activate($(this));
@@ -82,36 +103,21 @@ $('.year.y17').click(function(){
 	$('.per, .didac, .orien, .salsa, .folk, .disney, .didacC, .folkC, .lap, .fibraP, .alC1, .alC2, .perT, .folkT, .didacT, .salsaT, .orienT, .didacCT, .disneyT, .folkCT, .lapT, .fibraPT, .tAper, .tCamp, .tFog, .tReci, .tSke, .tZumb').addClass('changed red');
 	$('.fibra, .acri, .acriT, .fibraT, .tCumple, .tDise, .tInsta, .tOcio, .tPrev, .tReu, .tVia').addClass('changed violet');
 
+	var viaje = {
+		text: 'VIAJE A NY',
+		color: 'red',
+		category: 'alegria'
+	}
+	var music = {
+		text: 'MUSICALES EN BROADWAY',
+		color: 'blue',
+		category: 'alegria'
+	}
 	var showComedia = {
-		text: 'SHOW COMEDIA',
-		color: 'blue',
-		category: 'alegria'
-	}
-	var actoScout = {
-		text: 'ACTO SCOUT',
-		color: 'red',
-		category: 'alegria'
-	}
-		var test1 = {
-		text: 'ENTREGA CINTO',
-		color: 'red',
-		category: 'paz'
-	}
-			var test2 = {
-		text: 'ITINERANCIA',
-		color: 'red',
-		category: 'paz'
-	}
-				var test3 = {
-		text: 'BOOTCAMP',
-		color: 'blue',
-		category: 'paz'
-	}
-				var test4 = {
-		text: 'CLASE CAIDA LIBRE',
-		color: 'red',
+		text: 'SHOW COM. MUSICAL',
+		color:'blue',
 		category: 'verguenza'
 	}
 
-	eventsHandler.generateEmEvents([showComedia, actoScout, test1, test2, test3, test4]);
+	eventsHandler.generateEmEvents([showComedia, viaje, music]);
 });

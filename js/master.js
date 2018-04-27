@@ -1,4 +1,4 @@
-//master object, encargado de manejar la logica de activado y desactivado de combinaciones de colores
+	//master object, encargado de manejar la logica de activado y desactivado de combinaciones de colores
 var master = {
 	activeElement: $('body'), //initialize with something
 	that: this

@@ -6,6 +6,8 @@ var credits = $('#creditos');
 var circle = $('.progress-content>circle');
 var cx = circle.attr('cx');
 
+
+
 var load = setInterval(updateProgressValue, 30);
 
 var updateProgressLine = function(value){  
