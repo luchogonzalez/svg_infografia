@@ -74,6 +74,28 @@ $('.year.y94').click(function(){
 //13
 //14
 //15
+$('.year.y15').click(function(){
+	master.activate($(this));
+
+	$('.didac, .didacT, tAdor, tCoro .tEns, .tRet, .tMision, .tMisa, .pazD1, .pazD2 ').addClass('changed blue');
+	$('.alC1, .alC2, .alC3').addClass('changed red');
+	$('.tVia, .tReu, .tPrev, .tPen, .tCurso, .tOcio, .tInsta, .tDise, .tCumple').addClass('changed violet');
+
+	var arm = {
+		text: 'VIAJE A ARMENIA',
+		color: 'red',
+		category: 'alegria'
+	}
+	var uke = {
+		text: 'COMPRA UKELELE',
+		color: 'blue',
+		category: 'paz'
+	}
+
+	eventsHandler.generateEmEvents([arm, uke]);
+
+});
+
 //16
 $('.year.y16').click(function(){
 	master.activate($(this));
@@ -88,7 +110,7 @@ $('.year.y16').click(function(){
 		category: 'alegria'
 	}
 	var mision = {
-		text: 'MISION',
+		text: 'NUEVA MISION',
 		color: 'blue',
 		category: 'alegria'
 	}
