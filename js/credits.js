@@ -14,7 +14,7 @@ credits.click(function(){
 });
 
 function createDialog() {
-	var dialogString = "<div id='dialog'><img src='assets/credits2.svg' /></div>";
+	var dialogString = "<div id='dialog'><img src='assets/credits.svg' /></div>";
 	$('#main').after(dialogString);
 
 	$('#dialog').dialog({
