@@ -14,12 +14,15 @@ credits.click(function(){
 });
 
 function createDialog() {
-	var dialogString = "<div id='dialog' title='Créditos'><img src='assets/credits.svg' /></div>";
+	var dialogString = "<div id='dialog'><img src='assets/credits.svg' /></div>";
 	$('#main').after(dialogString);
 
 	$('#dialog').dialog({
 		show: {effect: 'fade', duration: 300},
 		hide: {effect: 'fade', duration: 250},
+		width: 500,
+		height: 320,
+		modal: true,
 		dialogClass: 'dialog'
 	});
 }

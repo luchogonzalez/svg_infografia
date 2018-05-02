@@ -91,11 +91,16 @@ body{
 	top:-100px;
 }
 
-.dialog, .ui-widget-header{
-	font-family: 'Poppins-Regular';
-	color: #B29BC6;
+.ui-dialog .ui-dialog-content {
+	padding:0;
 }
 
+.dialog, .ui-widget-header, .ui-button, .ui-button:active{
+	font-family: 'Poppins-Regular';
+	color: #B29BC6;
+	border: none;
+	background-color: #FFFFFF;
+}
 
 
 *{
