@@ -106,7 +106,7 @@ body{
 *{
 	transition: fill 1s;
 }
-.year:hover, #creditos:hover{
+.year:hover, #creditos:hover, .sit:hover{
 	cursor: pointer;
 }
 
